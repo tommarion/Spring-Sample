@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper'>
+			<div>
+				404!<br/>
+				This page cannot be found<br/>
+				(or maybe you're not authorized, sneaky)
+			</div>
+		</div>
+		<div th:replace='common/footer :: footer'></div>
+	</body>
+	<script src='/javascripts/jquery.slim.js'></script>
+	<script src='/javascripts/index.js'></script>
+	<script>
+		var containerStrings = [
+			"Software",
+			"Website",
+			"Hardware",
+			"Application",
+			"e-commerce",
+			"Design"
+		]
+
+		setTimeout( function(){
+			$( '#cursor' ).addClass( 'typing' );
+			setText( 0, 0 );
+		}, 1000)
+
+		function setText( stringIndex, index ) {
+			if( stringIndex < containerStrings.length ) {
+				if( index >= containerStrings[stringIndex].length ){
+						$( '#cursor' ).removeClass( 'typing' );
+						setTimeout( function(){
+							$( '#service_container' ).html('');
+							setTimeout( function(){
+								$( '#cursor' ).addClass( 'typing' );
+								setText( stringIndex+1, 0 );
+							}, 500);
+						}, 3000);
+					}
+				else {
+					$( '#service_container' ).html( $( '#service_container' ).html() + containerStrings[stringIndex].charAt(index) );
+					setTimeout( function(){
+						setText( stringIndex, index+1 );
+					}, 100 + (Math.random()*200) )
+				}
+			} else {
+				// setTimeout( function(){
+					setText( 0, 0 );
+				// }, 500);
+			}
+		}
+	</script>
+</html>

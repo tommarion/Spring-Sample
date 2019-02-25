@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper'>
+			<div class='infinite_slide platforms'>
+				<div class='pc' style='background-image: url(img/pc.jpg);'>
+				</div>
+				<div class='mac post-load' data-background='mac.jpg'>
+				</div>
+				<div class='pc post-load' data-background='pc.jpg'>
+				</div>
+				<div class='text'>
+					<div style="top:calc( 4vw + 6vh + 50px ); left:calc( 54vw - 150px ); width:calc( 100vw - 54vw + 150px ); font-weight:bold;">
+						The<br/>
+						<span id='service_container'></span><span id='cursor'>|</span><br/>
+						Professional
+					</div>
+				</div>
+			</div>
+			<div class='text-block'>
+				<div style='font-size: calc( 1.2vw + 27px );'>
+					Platform-independent<br/>
+					Scalable solutions<br/><br/>
+				</div>
+				<div class='flex'>
+					<div>
+						Whether you prefer a Win&shy;dows, macOS, or Unix en&shy;viron&shy;ment, go&shy;od soft&shy;ware sho&shy;uld just work. As your needs ma&shy;ture, your tech&shy;no&shy;logy sol&shy;ut&shy;ions have to be flex&shy;ible enough to grow with you.
+					</div>
+					<div>
+						<div th:replace='common/circuit :: circuit'></div>
+					</div>
+				</div>
+				<div>
+
+				</div>
+			</div>
+			<div class='mobile-multi post-load' data-background='mobile-multi.png'>
+				<div class='text blue'>
+					<div style='font-size: calc( 1.2vw + 27px );'>
+						Responsive,<br/>
+						Mobile-first designs
+					</div>
+				</div>
+			</div>
+			<div class='text-block'>
+				<div>
+					Multi-generational mobile d&shy;e&shy;vice in&shy;te&shy;gra&shy;tion is im&shy;per&shy;ative for ro&shy;bust soft&shy;ware and web&shy;site de&shy;sign.
+				</div>
+				<div>
+					<p>
+						Mobile devices now acc&shy;ount for more than half of all inter&shy;net tra&shy;ffic. At the same time, phone sales have begun to de&shy;cline.
+					</p>
+					This suggests that there is a much higher per&shy;cent&shy;age of old&shy;er devices being used than ever be&shy;fore.
+				</div>
+			</div>
+			<div class='camera post-load' data-background='camera.jpg'>
+<!-- 				<div class='text' style='position:relative;'>
+					<div style="bottom:calc( 6vw + 8vh + 82px ); left:calc( 40vw - 20px ); width:55vw; padding-right:calc( 5vw - 20px );">
+						Enterprise software<br/>
+						Simple & functional
+						<br/>
+						<br/>
+						Customized media integration to make your website stand out
+					</div>
+				</div> -->
+			</div>
+			<div class='text-block'>
+				<div class='flex'>
+					<div>
+						With the right opti&shy;miza&shy;tion, you don't need to sacrifice per&shy;formance for rich con&shy;tent.
+						<p>
+							Template sites are quick and easy, but they lack per&shy;son&shy;ality. Make sure your brand stands out. 
+						</p>
+					</div>
+					<div class='bull-list'>
+						&bull; Images<br/>
+						&bull; 3D Models<br/>
+						&bull; Audio & Video<br/>
+						&bull; Animations<br/>
+						&bull; Social Media<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div th:replace='common/footer :: footer'></div>
+	</body>
+	<script src='/javascripts/jquery.slim.js'></script>
+	<script src='/javascripts/index.js'></script>
+	<script>
+		var containerStrings = [
+			"Software",
+			"Website",
+			"Hardware",
+			"Application",
+			"e-commerce",
+			"Design"
+		]
+
+		setTimeout( function(){
+			$( '#cursor' ).addClass( 'typing' );
+			setText( 0, 0 );
+		}, 1000)
+
+		function setText( stringIndex, index ) {
+			if( stringIndex < containerStrings.length ) {
+				if( index >= containerStrings[stringIndex].length ){
+						$( '#cursor' ).removeClass( 'typing' );
+						setTimeout( function(){
+							$( '#service_container' ).html('');
+							setTimeout( function(){
+								$( '#cursor' ).addClass( 'typing' );
+								setText( stringIndex+1, 0 );
+							}, 500);
+						}, 3000);
+					}
+				else {
+					$( '#service_container' ).html( $( '#service_container' ).html() + containerStrings[stringIndex].charAt(index) );
+					setTimeout( function(){
+						setText( stringIndex, index+1 );
+					}, 100 + (Math.random()*200) )
+				}
+			} else {
+				// setTimeout( function(){
+					setText( 0, 0 );
+				// }, 500);
+			}
+		}
+	</script>
+</html>

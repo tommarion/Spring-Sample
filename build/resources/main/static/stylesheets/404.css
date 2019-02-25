@@ -1,0 +1,14 @@
+/*************/
+/* HOME PAGE */
+/*************/
+
+#wrapper div {
+    height: calc( 35vh + 80px ) !important;
+    margin-top: calc( 150px );
+    padding-top: calc( 50vh - 230px );
+    padding-bottom: 10vw;
+    font-size: calc( 3vw + 19px );
+    font-weight: bolder;
+    color: #01385f;
+    text-align: center;
+}

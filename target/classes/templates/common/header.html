@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head class="content-header" th:fragment="header">
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#4881ea">
+
+	<title th:text="'Webversive | ' + ${#strings.capitalize(title)}"></title>
+
+	<meta name="description" content="Webversive is a custom software and website development company, focused on natively-supported interactive media."
+	/>
+
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="Webversive">
+	<meta itemprop="description" content="Webversive is a custom software and website development company, focused on natively-supported interactive media.">
+	<!-- <meta itemprop="image" content="https://www.baetes.com/images/logo/embed.png"> -->
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="product">
+	<meta name="twitter:site" content="@webversive">
+	<meta name="twitter:title" content="Webversive">
+	<meta name="twitter:description" content="Webversive is a custom software and website development company, focused on natively-supported interactive media.">
+	<meta name="twitter:image" content="https://www.baetes.com/images/logo/embed.png">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Webversive" />
+	<meta property="og:type" content="business.business" />
+	<meta property="og:url" content="https://www.webversive.com/" />
+	<!-- <meta property="og:image" content="https://www.baetes.com/images/logo/embed.png" /> -->
+	<meta property="og:description" content="Webversive is a custom software and website development company, focused on natively-supported interactive media."
+	/>
+	<meta property="og:site_name" content="Webversive" />
+	<link rel="stylesheet" href="/stylesheets/webversive.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Devonshire" rel="stylesheet">
+	<link rel='stylesheet' th:href="'/stylesheets/' + ${title} + '.css'"/>
+</head>
+</html>

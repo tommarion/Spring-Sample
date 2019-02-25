@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper'>
+			<div class='ecommerce'>
+				<div class='text'>
+					<div>
+							Business-minded<br/>Solutions
+					</div>
+				</div>
+			</div>
+			<div class='text-block'>
+				<div class='flex'>
+					<div>
+						We specialize in crafting si&shy;m&shy;ple, yet elegant and fun&shy;ctional enterprise software for a var&shy;iety of services
+					</div>
+					<div class='bull-list'>
+						&bull; E-commerce<br/>
+						&bull; Advertising & CRM<br/>
+						&bull; Inventory & ERP <br/>
+						&bull; Management Tools<br/>
+						&bull; Employee Portal<br/>
+					</div>
+				</div>
+			</div>
+			<div class='hardware image'>
+				<div class='text'>
+					<div style="top:calc( 10vw + 8vh + 50px ); left:calc( 4vw + 40px ); width:calc( 100% - 27vw ); padding-right:calc( 23vw - 40px );">
+							The right hardware is <i>crucial</i><br/>Save time and money — do it right the first time
+						<p>
+							We can provide consulting services on a build, or just handle everything for you. Expert cabling is also available
+						</p>
+					</div>
+				</div>
+			</div>
+<!-- 			<div class='software image large'>
+				<div class='text'>
+					<div style="top:calc( 10vw + 8vh + 50px ); left:calc( 4vw + 40px ); width:calc( 100% - 27vw ); padding-right:calc( 23vw - 40px );">
+						Custom-tailored proprietary software in addition to basic services for businesses of any size
+					</div>
+				</div>
+			</div> -->
+			<div class='pi image large'>
+				<div class='text'>
+					<div style="top:calc( 10vw + 8vh + 50px ); left:calc( 4vw + 40px ); width:calc( 100% - 27vw ); padding-right:calc( 23vw - 40px );">
+						Lightweight and affordable options for your dream project<br/>
+						<p>
+							&bull; Custom arcade machines<br/>
+							&bull; Homebrew smart devices<br/>
+							&bull; Personal cloud storage<br/>
+							&bull; Media center box<br/>
+						</p>
+						If you can think of it, we can build it
+					</div>
+				</div>
+			</div>
+		</div>
+		<div th:replace='common/footer :: footer'></div>
+	</body>
+	<script src='javascripts/jquery.slim.js'></script>
+	<script src='javascripts/index.js'></script>
+</html>

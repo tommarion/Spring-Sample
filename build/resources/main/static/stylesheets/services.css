@@ -1,0 +1,38 @@
+#wrapper div.hardware {
+	background-image: url(/img/hardware.jpg);
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: multiply;
+}
+#wrapper div.software {
+	background-image: url( '/img/software.jpg' );
+	 filter: saturate(1.4);
+    background-color: #3a0c65c4;
+    background-blend-mode: multiply;
+}
+#wrapper div.pi {
+	background-image: url( '/img/pi.jpg' );
+	background-color: rgba(39, 62, 19, 0.75);
+    background-blend-mode: multiply;
+}
+
+#wrapper div.ecommerce {
+	height: 40vw !important;
+	min-height: 270px !important;
+	background-image: url( '/img/ecommerce.jpg' );
+}
+#wrapper div.ecommerce>.text>div {
+	top: calc( 6vw + 8vh + 60px );
+	right: calc( 40vw - 160px );
+	width: calc( 5vw + 230px );
+	font-weight: bold;
+}
+.large {
+	min-height: 600px !important;
+}
+#wrapper>div:not(#policy__wrapper):not(#work__wrapper):first-child {
+	height: calc( 100vh - 30px );
+	margin-top: 30px;
+}
+#wrapper>div:not(#policy__wrapper):not(#work__wrapper):not(.text-block) {
+	min-height: 400px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper'>
+			<div class='text-block'>
+				<a href='https://www.alliedmaker.com'><img src='/assets/images/am-logo.png' class='am-logo'/></a>
+				<p>
+					The artisans at <a href='https://www.alliedmaker.com'>Allied Maker</a> design and produce hand&shy;crafted fine lighting<br/><br/>
+					We collaborated on pro&shy;p&shy;r&shy;ie&shy;tary software, which in&shy;te&shy;grated seamlessly with their CRM and e-commerce plat&shy;form, to handle the tho&shy;u&shy;sands of dynamic pro&shy;duct options for their fix&shy;tures
+				</p>
+				<hr>
+				<a href='https://baetes.com'><img src='/assets/images/baetes_black.png' class='baetes-logo'/></a>
+				<p>
+					Webversive℠ partnered w&shy;i&shy;th the master digital art&shy;ists at <a href='https://baetes.com'>Baetes</a> to deliver an in&shy;timate and immersive v-commerce experience
+				</p>
+				<iframe id='baetes__frame' src='https://baetes.com/embed?id=woden-sneaker01'></iframe>
+			</div>
+			<div th:replace='common/footer :: footer'></div>
+		</div>
+	</body>
+	<script src='javascripts/jquery.slim.js'></script>
+	<script src='javascripts/index.js'></script>
+</html>

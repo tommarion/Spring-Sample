@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<nav>
+	<div th:switch='${title}'>
+		<div th:case='Home' id='logo' class='active'></div>
+		<a th:case='*' href='/'><div id='logo'></div></a>
+	</div>
+	<div id='inline-menu'>
+		<a th:unless="${title} eq 'Projects'" href='/projects'><div>Projects</div></a>
+		<div th:if="${title} eq 'Projects'" class='active'>Projects</div>
+
+		<a th:unless="${title} eq 'Technology'" href='/technology'><div>Technology</div></a>
+		<div th:if="${title} eq 'Technology'" class='active'>Technology</div>
+
+		<a th:unless="${title} eq 'Services'" href='/services'><div>Services</div></a>
+		<div th:if="${title} eq 'Services'" class='active'>Services</div>
+
+		<a th:unless="${title} eq 'Artless'" href='/artless' class='artless-link'><div>Artless</div></a>
+		<div th:if="${title} eq 'Artless'" class='active artless-link'>Artless</div>
+	</div>
+	<div id='nav-toggle'>
+		<svg viewBox='0 0 20 20'>
+			<line x1='2' y1='5' x2='18' y2='5' stroke-with='2' stroke='white'/>
+			<line x1='2' y1='10' x2='18' y2='10' stroke-with='2' stroke='white'/>
+			<line x1='2' y1='15' x2='18' y2='15' stroke-with='2' stroke='white'/>
+		</svg>
+	</div>
+	<div id='nav-menu'>
+		<a th:unless="${title} eq 'Projects'" href='/projects'><div>Projects</div></a>
+		<div th:if="${title} eq 'Projects'" class='active'>Projects</div>
+		<hr/>
+		<a th:unless="${title} eq 'Technology'" href='/technology'><div>Technology</div></a>
+		<div th:if="${title} eq 'Technology'" class='active'>Technology</div>
+		<hr/>
+		<a th:unless="${title} eq 'Services'" href='/services'><div>Services</div></a>
+		<div th:if="${title} eq 'Services'" class='active'>Services</div>
+		<hr/>
+		<a th:unless="${title} eq 'Artless'" href='/artless' class='artless-link'><div>Artless</div></a>
+		<div th:if="${title} eq 'Artless'" class='active artless-link'>Artless</div>
+	</div>
+</nav>
+</div>

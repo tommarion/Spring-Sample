@@ -1,0 +1,49 @@
+/*****************/
+/* PROJECTS PAGE */
+/*****************/
+
+.text-block a {
+	color: rgba(0,10,50,0.4);
+	text-decoration: none;
+	font-weight: 900;
+}
+.text-block a:hover {
+	opacity: 0.6;
+}
+
+#wrapper>div:first-child {
+	margin-top: 30px;
+}
+
+.baetes-logo {
+	width: calc( 10vw + 190px );
+	height: calc( (10vw + 190px ) * 0.09354 );
+}
+
+.am-logo {
+	margin-top: 2vw;
+	width: calc( 10vw + 190px );
+}
+#wrapper hr {
+	margin: 60px 15%;
+}
+
+@media screen and (max-width: 899px) {
+	#baetes__frame {
+		border: none;
+	    height: 50vw;
+	    width: 90%;
+	    margin: 20px 5% 20px;
+	}
+}
+@media screen and (min-width: 900px) {
+	#baetes__frame {
+		border: none;
+	    height: 15vw;
+	    width: 80%;
+	    margin: 20px 20% 40px 0;
+	}
+}
+
+
+

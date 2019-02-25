@@ -1,0 +1,16 @@
+#policy__wrapper {
+	overflow-wrap: break-word;
+	hyphens:auto;
+}
+#policy__wrapper a {
+	hyphens: none;
+}
+#policy__wrapper em>span {
+	word-break: normal;
+}
+#policy__wrapper.thin-line {
+	line-height: 0.82;
+}
+#policy__wrapper.small-text {
+	font-size: 18px !important;
+}

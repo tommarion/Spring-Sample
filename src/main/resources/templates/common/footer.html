@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<footer>
+	<div id='contact'>
+		Webversive℠<br/>
+		<p>	
+			Websites<br/>
+			Software<br/>
+			Hardware<br/>
+			Consultation
+		</p>
+		<a href='mailto:contact@webversive.com'>Email Us</a>
+	</div>
+	<div></div>
+	<div id='legal'>
+		<div th:unless="${title} eq 'Privacy Policy'"><a href='/privacypolicy'>Privacy Policy</a></div>
+		<div th:if="${title} eq 'Privacy Policy'" class='active'>Privacy Policy</div>
+
+		<div th:unless="${title} eq 'Cookie Policy'"><a href='/cookiepolicy'>Cookie Policy</a></div>
+		<div th:if="${title} eq 'Cookie Policy'" class='active'>Cookie Policy</div>
+
+		<div th:unless="${title} eq 'Terms of Use'"><a href='/terms'>Terms of Use</a></div>
+		<div th:if="${title} eq 'Terms of Use'" class='active'>Terms of Use</div>
+
+		<div th:unless="${title} eq 'Legal Disclaimers'"><a href='/legal'>Disclaimers</a></div>
+		<div th:if="${title} eq 'Legal Disclaimers'" class='active'>Disclaimers</div>
+	</div>
+</footer>
+</html>

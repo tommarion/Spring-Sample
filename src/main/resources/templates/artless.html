@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper' class='work'>
+			<div id='work__wrapper'>
+				<div class='inline'>
+					<div id='artless-logo__wrapper'>
+						<div class='artless-logo'><span class='red'>Art</span>less</div>
+						<span>/ˈärtləs/</span>
+					</div>
+					<div id='def__wrapper'>
+						<p>&#8226;&emsp;<span class='def-text'>natural and simple</span></p>
+						<p>&#8226;&emsp;<span class='def-text'>ingenuous</span></p>
+					</div>
+				</div>
+				<div id='artless-description'>
+					<div class='artless-logo'><span class='red'>Art</span>less</div> is an initiative to help artists and creatives develop personalized interactive content to showcase their craft.
+				</div>
+			</div>
+			<div th:replace='common/footer :: footer'></div>
+		</div>
+	</body>
+	<script src='/javascripts/jquery.slim.js'></script>
+	<script src='/javascripts/index.js'></script>
+</html>

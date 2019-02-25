@@ -1,0 +1,43 @@
+#artless-logo__wrapper {
+	flex: 0 0 145px;
+	text-align: center;
+}
+.artless-logo {
+	font-family: 'Devonshire', 'cursive';
+}
+#artless-logo__wrapper>.artless-logo {
+	font-size: 60px;
+}
+div:not(#artless-logo__wrapper)>.artless-logo {
+	line-height: 1.5;
+	font-size: 1.6em;
+	width: calc( 85px + 1vw );
+    float: left;
+    height: 31px;
+    margin-top: calc( -0.4vw - 11px );
+    position: relative;
+    top: 3px;
+}
+.artless-logo>.red {
+	color: #cc3300;
+}
+#def__wrapper {
+	flex: 0 0 310px;
+	margin-left: calc( 16vw - 10px + 0.2em );
+	font-size: 0.8em;
+}
+#def__wrapper>p {
+	margin: 15px 0;
+}
+#def__wrapper>p:first-child {
+	margin-top: 30px;
+}
+.def-text {
+	font-weight: 300;
+	font-style: italic;
+}
+
+#artless-description {
+	margin-top: calc( 2vw + 50px );
+	line-height: 130%;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:include="common/header :: header"></head>
+	<body>
+		<div th:replace='common/nav :: nav'></div>
+		<div id='wrapper'>
+			<div class='software image large'>
+				<div class='text'>
+					<div style="top:calc( 4vw + 8vh + 70px ); left:calc( 25vw + 40px );">
+						Full-Stack<br/>
+						Development
+					</div>
+				</div>
+			</div>
+			<div class='text-block'>
+				<div class='flex backwards'>
+					<div>
+						<div style='font-size: calc( 1.2vw + 27px );'>
+							Front-End
+						</div>
+						Leverage the latest and most popular frame&shy;works and lib&shy;raries to create rich and res&shy;pon&shy;sive UI, quicker than ever. We can help you decide which is/are best for the job
+					</div>
+					<div class='hidesmall'>
+						<svg viewBox='10 0 28 10' height='100%' width='100%'>
+							<polyline points="16,2 13,5 16,8"fill="none" stroke="#01385f88" stroke-width='1' />
+							<line x1='18' y1='2' x2='21' y2='8' stroke='#01385f88' stroke-width='1'/>
+							<polyline points="23,2 26,5 23,8"fill="none" stroke="#01385f88" stroke-width='1' />
+						</svg>
+					</div>
+				</div>
+				<div class='logo-container'>
+					<div class='logo__wrapper angular'></div>
+					<div class='logo__wrapper react'></div>
+					<div class='logo__wrapper redux'></div>
+					<div class='logo__wrapper ember'></div>
+					<div class='logo__wrapper bootstrap'></div>
+					<div class='logo__wrapper jquery'></div>
+					<div class='logo__wrapper ajax'></div>
+				</div>
+				<div class='logo-container middle'>
+					<div class='logo__wrapper java'></div>
+					<div class='logo__wrapper spring'></div>
+					<div class='logo__wrapper go'></div>
+					<div class='logo__wrapper node'></div>
+					<div class='logo__wrapper php'></div>
+					<div class='logo__wrapper apache'></div>
+					<div class='logo__wrapper nginx'></div>
+				</div>
+				<div class='flex'>
+					<div>
+						<div style='font-size: calc( 1.2vw + 27px );'>
+							Back-End
+						</div>
+						There are a variety of tech&shy;nologies avail&shy;able to run servers with, each with their own advan&shy;tages and dis&shy;advan&shy;tages.
+					</div>
+					<div class='hidesmall'>
+						<svg viewBox="-20 2.5 80 35" height="100%" width="100%">
+							<defs>
+						    	<clipPath id="cut-off-1">
+						      		<rect x="28.5" y="17" width="23" height="5"></rect>
+						    	</clipPath>
+						    	<clipPath id="cut-off-2">
+						      		<rect x="28.5" y="23" width="23" height="5"></rect>
+						    	</clipPath>
+						    	<clipPath id="cut-off-3">
+						      		<rect x="0" y="29" width="80" height="5"></rect>
+						    	</clipPath>
+						    	<clipPath id="cut-off-4">
+						      		<rect x="28.5" y="11" width="23" height="5"></rect>
+						    	</clipPath>
+						    	<clipPath id="cut-off-5">
+						      		<rect x="0" y="6" width="80" height="5"></rect>
+						    	</clipPath>
+						  	</defs>
+							<ellipse cx="40" cy="29" rx="12" ry="4" stroke-width="1" stroke="#01385f88" fill="none" clip-path="url(#cut-off-3)"></ellipse>
+							<ellipse cx="40" cy="23" rx="12" ry="4" stroke-width="1" stroke="#01385f88" fill="none" clip-path="url(#cut-off-2)"></ellipse>
+							<ellipse cx="40" cy="17" rx="12" ry="4" stroke-width="1" stroke="#01385f88" fill="none" clip-path="url(#cut-off-1)"></ellipse>
+							<ellipse cx="40" cy="11" rx="12" ry="4" stroke-width="1" stroke="#01385f88" fill="none" clip-path="url(#cut-off-4)"></ellipse>
+							<ellipse cx="40" cy="11" rx="12" ry="4" stroke-width="1" stroke="#01385f88" fill="none" clip-path="url(#cut-off-5)"></ellipse>
+							<line x1="28" y1="11" x2="28" y2="29" stroke="#01385f88" stroke-width="1"></line>
+							<line x1="52" y1="11" x2="52" y2="29" stroke="#01385f88" stroke-width="1"></line>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class='hardware image'>
+				<div class='text'>
+					<div style="top:calc( 10vw + 8vh + 50px ); left:calc( 4vw + 40px ); width:calc( 100% - 27vw ); padding-right:calc( 23vw - 40px );">
+						Webversive℠ specializes in a range of web graphics technologies, from SVG and CSS animations to 3D model rendering using the <a href='https://threejs.org/'>three.js</a> library
+					</div>
+				</div>
+			</div>
+			<div th:replace='common/footer :: footer'></div>
+		</div>
+	</body>
+	<script src='/javascripts/jquery.slim.js'></script>
+	<script src='/javascripts/index.js'></script>
+	<script>
+		$( '.logo-container' ).children().each(function(){
+			var company = $( this ).attr( 'class' ).replace( 'logo__wrapper ','' );
+			$( this ).html( "<div class='logo' style='background-image:url(\"/img/logo/" + company + "-logo.png\")'></div>" );
+		});
+	</script>
+</html>
